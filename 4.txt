@@ -1,0 +1,11 @@
+print("LOCKDOWN GAME PROGRAM")
+choice='y'
+while choice=='y':
+  n=input("enter the number of the position of box   ")
+  k=input("and no of positions chandra wants to move")
+  if int(n)-int(k)<0:
+    print("surya wins")
+  else:
+    print("chandra wins")
+  choice=input("if u wish to continue press y")
+-----------------------------------------------------------------------

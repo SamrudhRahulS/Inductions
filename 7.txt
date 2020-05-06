@@ -1,0 +1,11 @@
+import numpy as np
+print("POLYNOMIAL PROBLEM")
+n=int(input("enter the degree"))
+arr=[]
+for i in range(5):
+    arr.append(0)
+for i in range(n+1):
+    arr[i]=int(input("enter the x power" + str(i) + " coefficient"))
+print("the roots of equation are ")
+print(np.roots([arr[4],arr[3],arr[2],arr[1],arr[0]]))
+-----------------------------------------------------------------------------

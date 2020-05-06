@@ -1,0 +1,13 @@
+print("equalizing array program")
+a=input("enter the contents of array,use space to separate the elements, to terminate press enter ")
+arr=a.split()
+print(arr)
+n=len(arr)
+elements_equal=0
+for i in range((n//2)+1):
+  j=i+1 
+  for k in range(j,n):
+    if (abs(int(arr[i])-int(arr[j]))%2==1):
+      elements_equal+=1
+print(elements_equal)
+----------------------------------------------------------------

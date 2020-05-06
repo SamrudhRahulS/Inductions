@@ -1,0 +1,30 @@
+print("NP'S PIZZAS PROBLEM")
+a=input(print("enter the no of pizzas on each day ,space to separate,enter to terminate"))
+arr=a.split()
+for i in range(len(arr)):
+  arr[i]=int(arr[i])
+print(arr)
+su=0
+sum1=[]
+days=[]
+for i in range(len(arr)):
+  su+=arr[i]
+  sum1.append(su)
+print(sum1)
+query=input("enter the no of pizzas u want to display the no of days needed,space to terminate ,enter to terminate")
+qu=query.split()
+for i in range(len(qu)):
+  qu[i]=int(qu[i])
+print(qu)
+for i in qu:
+  for j in range(len(sum1)):
+    if (i<=sum1[j]):
+      c=j+1 
+      days.append(c)
+      break
+print(days)
+for i in range(len(qu)):
+  print("to get " + str(qu[i]) + "pizzas, he needs " +str(days[i])+" days")
+------------------------------------------------------------------------------
+
+

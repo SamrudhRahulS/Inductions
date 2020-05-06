@@ -1,0 +1,22 @@
+print("EASY QUESTION PROGRAM")
+choice=0
+a=input("enter the numbers ,space to separate ,enter to terminate")
+arr=a.split()
+for i in range(len(arr)):
+  arr[i]=int(arr[i])
+arr.sort()
+search=input("enter the numbers u want to search,space to separate ,enter to terminate")
+sealist=search.split()
+for i in range(len(sealist)):
+  sealist[i]=int(sealist[i])
+emp=[]
+for i in sealist:
+  for j in range(len(arr)):
+    if i==arr[j]:
+      emp.append((j+1))
+      break
+    else:
+      emp.append(-1)
+for i in range(len(emp)):
+  print(str(sealist[i]) + " is present as element no. " + str(emp[i]))
+-----------------------------------------------------------------------------

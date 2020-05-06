@@ -1,0 +1,23 @@
+print('math problem program')
+a=input("enter the numbers u need to know the no of divisors,space to separate ,enter to terminate")
+arr=a.split()
+for i in range(len(arr)):
+  arr[i]=int(arr[i])
+div=[]
+fac=[]
+for i in arr:
+  prod=1
+  for j in range(1,i+1):
+    prod*=j 
+  div.append(prod)
+print(div)
+for i in div:
+  d=0
+  for j in range(1,i+1):
+    if i%j==0:
+      d+=1 
+  fac.append(d)
+print(fac)
+for i in range(len(arr)):
+  print("the factorial of " + str(arr[i]) + " has " + str(fac[i]) + " divisors")
+-------------------------------------------------------------------------

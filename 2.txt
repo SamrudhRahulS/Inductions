@@ -1,0 +1,20 @@
+print("slack off program")
+a=input("enter the contents of array,use space to separate the elements, to terminate press enter ")
+arr=a.split()
+print(arr)
+
+while True:
+  b=-1
+  n=len(arr)
+  if (n==1):
+    break
+  for i in arr:
+    b=b+1
+    if b%2==0:
+      arr[b]='n'
+  for j in arr:
+    if j=='n':
+      arr.remove(j)    
+  
+print(arr)
+-----------------------------------------------------------------
