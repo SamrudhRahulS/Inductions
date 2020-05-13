@@ -1,0 +1,29 @@
+print("GURU AND ARRAY PROBLEM")
+a=input("enter the elements of array , use space to separate and enter to terminate")
+arr=a.split()
+op=int(input("enter the max no of operations"))
+sum1=0
+for i in range(len(arr)):
+  arr[i]=int(arr[i])
+arr.sort()
+print(arr)
+d=0
+n=len(arr)
+n1=n 
+for i in range(n1):
+  if arr[i]<0:
+    e=n-1
+    temp=arr[e]
+    arr[e]=arr[i]
+    arr[i]=temp
+    n-=1 
+    d+=1
+  if d==op:
+    break
+  if n==1:
+    break
+  
+print(arr)
+for i in range(n):
+  sum1+=arr[i]
+print("the highest possible sum is "+ str(sum1))

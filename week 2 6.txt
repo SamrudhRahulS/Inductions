@@ -1,0 +1,36 @@
+print("MERGE MERGE PROBLEM")
+a=input("enter the intervals using space to separate and enter to terminate")
+l=[]
+l1=[]
+arr=a.split()
+h=0
+s=1
+for i in range(len(arr)):
+  arr[i]=int(arr[i])
+for i in arr:
+  h+=1
+  k=arr.index(i)
+  if h%2==1:
+    l1=[]
+    l1.append(i)
+    l1.append(arr[k+1])
+    l2=[]
+    j=k+2
+    
+    while j<(len(arr)-1):
+      b=arr[j+1]
+      if arr[j]<arr[k+1]:
+        l1.append(arr[j])
+        l1.append(arr[j+1])
+        arr.remove(arr[k+1])
+        arr.remove(arr[k])
+      else:
+        j+=2 
+    x=min(l1)
+    y=max(l1)
+    l2.append(x)
+    l2.append(y)
+    l.append(l2)
+  
+print("the unique sets are: " +str(l))
+print("the number of unique sets are: "+str(len(l)))

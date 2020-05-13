@@ -1,0 +1,13 @@
+print("JACK AND HIS FUNGI PROBLEM")
+n=int(input("enter the amount of fungi needed"))
+a=0
+while n!=0:
+  b=1 
+  a+=1
+  while True:
+    if b*2<=n:
+      b*=2
+    else:
+      break
+  n-=b 
+print("the no of units needed are" + str(a))

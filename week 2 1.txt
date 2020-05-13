@@ -1,0 +1,14 @@
+print("SWAPODDY PROBLEM")
+a=input("enter the elements using space to separate and enter to terminate")
+arr=a.split()
+for i in range(len(arr)):
+  arr[i]=int(arr[i])
+for i in range(len(arr)):
+  for j in range(i+1,len(arr)):
+    sum1=arr[i]+arr[j]
+    if arr[i]>arr[j] and sum1%2==1 :
+      temp=arr[i]
+      arr[i]=arr[j]
+      arr[j]=temp
+
+print ("the final array is " + str(arr))

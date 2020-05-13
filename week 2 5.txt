@@ -1,0 +1,21 @@
+def average(arr):
+  return float(sum(arr)/len(arr))
+
+print("NANDU AND GRADES PROBLEM")
+a=input("enter the grades using space to separate and enter to terminate")
+arr=a.split()
+b=0
+for i in range(len(arr)):
+  arr[i]=int(arr[i])
+ave=average(arr)
+
+while ave<4.5:
+  mi=min(arr)
+  b+=1 
+  for i in range(len(arr)):
+    if arr[i]==mi:
+      arr[i]=5
+      ave=average(arr)
+      break
+   
+print("the no of subjects to redo is "+str(b))

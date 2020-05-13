@@ -1,0 +1,34 @@
+print("RAM AND HIS NUMBERS PROBLEM")
+
+n=int(input("enter the number till which number of good numbers have to be found out"))
+gd=0
+gd1=[]
+arr=[]
+for i in range(n):
+  arr.append(i)
+for z in range(1,len(arr)):
+  was=[]
+  was1=[]
+  i=arr[z]
+  pl=-1
+  for h in range(10):
+    if i//(10**h)!=0:
+      pl+=1
+    else:
+      break
+  while True:
+    j=i//(10**pl)
+    was.append(j)
+    i=i%(10**pl)
+    pl-=1 
+    if pl==-1:
+      break
+  for num in was: 
+    if num not in was1: 
+      was1.append(num)
+  if len(was1)<=2:
+    gd1.append(arr[z])
+    gd+=1
+    
+print("the no of good numbers are : "+str(gd))
+print(gd1)
